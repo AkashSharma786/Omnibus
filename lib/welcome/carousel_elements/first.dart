@@ -24,18 +24,18 @@ class First extends StatelessWidget {
                 
               ),
             ),
-            child: Container(
-              width: 75,
-              height: 75,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                image: DecorationImage(
-                    image: AssetImage(
-                  'images/omnibus_logo.jpg',
-                )),
-              ),
-            ),
+
+
+
+
+
+
+
           ),
+
+
+
+          
         ),
 
 

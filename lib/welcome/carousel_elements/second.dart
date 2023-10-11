@@ -23,17 +23,9 @@ class Second extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            child: Container(
-              width: 75,
-              height: 75,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                image: DecorationImage(
-                    image: AssetImage(
-                  'images/omnibus_logo.jpg',
-                )),
-              ),
-            ),
+
+
+
           ),
         ),
 
