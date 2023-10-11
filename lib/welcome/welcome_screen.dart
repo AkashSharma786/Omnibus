@@ -7,7 +7,6 @@ import 'package:omnibus/welcome/carousel_elements/third.dart';
 import 'package:omnibus/welcome/next_button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../home_screen.dart';
 import '../color_scheme.dart';
 
 class WelcomeScreen extends StatefulWidget {

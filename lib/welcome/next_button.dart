@@ -1,6 +1,6 @@
 import '../../color_scheme.dart';
-import 'package:omnibus/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:omnibus/dash_board/home_page.dart';
 
 class NextButton extends StatefulWidget {
   VoidCallback changeSlide;
@@ -60,7 +60,7 @@ class _NextButtonState extends State<NextButton> {
               
               if (widget.currentIndex == 2) {
 
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
               } else {
                 widget.changeSlide();
               }
