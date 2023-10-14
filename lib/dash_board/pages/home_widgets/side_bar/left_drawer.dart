@@ -19,7 +19,7 @@ class LeftDrawer extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-                  backgroundImage: AssetImage("assets/images/busLogo.png"),
+                  backgroundImage: AssetImage("images/busLogo.png"),
                 ),
                 SizedBox(height: 10),
                 Text(

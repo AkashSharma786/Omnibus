@@ -1,19 +1,17 @@
-import 'package:omnibus/auth/login_screen.dart';
-
 import '../../color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:omnibus/dash_board/home_page.dart';
 
-class NextButton extends StatefulWidget {
-  VoidCallback changeSlide;
-  int currentIndex;
-  NextButton({super.key , required this.changeSlide, required this.currentIndex  });
+class BigMainButton extends StatefulWidget {
+  String buttonName;
+  VoidCallback callback;
+
+  BigMainButton({super.key , required this.callback , required this.buttonName });
 
   @override
-  State<NextButton> createState() => _NextButtonState();
+  State<BigMainButton> createState() => _BigMainButtonState();
 }
 
-class _NextButtonState extends State<NextButton> {
+class _BigMainButtonState extends State<BigMainButton> {
 
   Color BoxShadowColor = AppColorScheme.primaryColor;
   
@@ -22,7 +20,7 @@ class _NextButtonState extends State<NextButton> {
     return         
           Ink(
           
-          width: 300,
+          width:  MediaQuery.of(context).size.width/1.08,
           height: 60,
         
           
@@ -59,15 +57,9 @@ class _NextButtonState extends State<NextButton> {
            },
 
             onTap: () {
+              widget.callback();
               
-              if (widget.currentIndex == 2) {
-
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-              } else {
-                widget.changeSlide();
-              }
-
-            
+           
               
             },
             splashColor: Colors.green,
@@ -77,7 +69,7 @@ class _NextButtonState extends State<NextButton> {
             child: Align(
               alignment: Alignment(0, 0),
               child: Text(
-                "Next",
+                widget.buttonName,
                 style: TextStyle(
                   color: AppColorScheme.secondaryTextColor,
                 ),
