@@ -19,7 +19,7 @@ class Second extends StatelessWidget {
             width: 300,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/holding_phone.png'),
+                image: AssetImage('images/mapImage.png'),
                 fit: BoxFit.contain,
               ),
             ),
@@ -44,7 +44,7 @@ class Second extends StatelessWidget {
             height: 100,
             alignment: Alignment(0.2, 0),
             child: Text(
-              "Your Satisfaction Is Our Second Priority.",
+              "See your bus comming.",
               style: TextStyle(
                   color: AppColorScheme.textColor,
                   fontWeight: FontWeight.bold,

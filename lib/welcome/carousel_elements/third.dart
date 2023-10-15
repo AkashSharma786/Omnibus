@@ -19,7 +19,7 @@ class Third extends StatelessWidget {
             width: 300,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/holding_phone.png'),
+                image: AssetImage('images/customerSupportImage.png'),
                 fit: BoxFit.contain,
               ),
             ),
@@ -45,7 +45,7 @@ class Third extends StatelessWidget {
             height: 100,
             alignment: Alignment(0.2, 0),
             child: Text(
-              "Your Satisfaction Is Our Third Priority.",
+              "Better Customer Support.",
               style: TextStyle(
                   color: AppColorScheme.textColor,
                   fontWeight: FontWeight.bold,

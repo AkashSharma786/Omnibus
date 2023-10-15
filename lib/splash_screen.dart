@@ -1,8 +1,15 @@
 import 'dart:async';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:omnibus/start_components/dialog_box.dart';
 import 'package:omnibus/welcome/welcome_screen.dart';
+import 'package:permission_handler/permission_handler.dart';
 import './color_scheme.dart';
+
+
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -11,15 +18,61 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  @override
-  void initState() {
-    super.initState();
+  bool connectionResult = false;
 
-    Timer(Duration(seconds: 5), () {
+
+void askPermission() async {
+
+  if(await Permission.location.isGranted == false) {
+    await Permission.location.request();
+  }
+
+  if( await Permission.storage.isGranted == false) {
+    await Permission.storage.request();
+  }
+  
+
+}
+
+  void checkInternet() async {
+    bool connectionResult = await  InternetConnectionChecker().hasConnection;
+    if(connectionResult == true) {
+
+      print('YAY! Free cute dog pics!');
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => WelcomeScreen()),
+      MaterialPageRoute(builder: (_) => WelcomeScreen()),
       );
-     });
+
+    } else {
+
+     showDialog(context: context,
+     barrierDismissible: false,
+
+      builder: (context) => ConnectionDialogBox(checkConnection: checkInternet,)
+     );
+    
+
+    
+    
+    }
+
+
+  }
+
+  @override
+  void initState()   {
+    super.initState();
+    askPermission();
+
+    checkInternet();
+
+
+
+   
+
+    
+
+
   }
 
 
