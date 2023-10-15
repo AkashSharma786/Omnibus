@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631802274736",
+    "project_id": "omnibus-38e36",
+    "storage_bucket": "omnibus-38e36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631802274736:android:b568eb0d2b383b301f6c75",
+        "android_client_info": {
+          "package_name": "com.example.omnibus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc_nKxsC4C8Eu_ukZ24G0IfoMy6bcZlts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
